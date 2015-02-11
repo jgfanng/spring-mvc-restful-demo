@@ -11,10 +11,11 @@
     <spring-web-version>4.1.4.RELEASE</spring-web-version>
     <spring-webmvc-version>4.1.4.RELEASE</spring-webmvc-version>
     <jackson-2-version>2.5.1</jackson-2-version>
+    <xstream-version>1.4.7</xstream-version>
     <servlet-api-version>2.5</servlet-api-version>
   </properties>
   <dependencies>
-    <!-- Spring -->
+    <!-- spring -->
     <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-core</artifactId>
@@ -31,14 +32,21 @@
       <version>${spring-webmvc-version}</version>
     </dependency>
 
-    <!-- Jackson -->
+    <!-- jackson -->
     <dependency>
       <groupId>com.fasterxml.jackson.core</groupId>
       <artifactId>jackson-databind</artifactId>
       <version>${jackson-2-version}</version>
     </dependency>
 
-    <!-- Servlet -->
+    <!-- xstream -->
+    <dependency>
+      <groupId>com.thoughtworks.xstream</groupId>
+      <artifactId>xstream</artifactId>
+      <version>${xstream-version}</version>
+    </dependency>
+
+    <!-- servlet -->
     <dependency>
         <groupId>javax.servlet</groupId>
         <artifactId>servlet-api</artifactId>
@@ -46,7 +54,7 @@
         <scope>provided</scope>
     </dependency>
 
-    <!-- Testing -->
+    <!-- testing -->
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>

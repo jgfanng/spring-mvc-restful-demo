@@ -24,20 +24,17 @@ public class EmployeeController {
         this.employeeService = employeeService;
     }
 
-    @RequestMapping(value = "employee/{id:[\\d]+}", method = RequestMethod.GET, produces = {
-            MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE })
+    @RequestMapping(value = "employee/{id:[\\d]+}", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
     public Employee getEmployeeById(@PathVariable int id) {
         return employeeService.getEmployeeById(id);
     }
 
-    @RequestMapping(value = "employee", method = RequestMethod.GET, produces = {
-            MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE })
+    @RequestMapping(value = "employee", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
     public Collection<Employee> getAllEmployees() {
         return employeeService.getAllEmployees();
     }
 
-    @RequestMapping(value = "employee", method = RequestMethod.PUT, consumes = {
-            MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE })
+    @RequestMapping(value = "employee", method = RequestMethod.PUT, consumes = MediaType.APPLICATION_JSON_VALUE)
     public String createEmployee(@RequestBody Employee employee) {
         employeeService.createEmployee(employee);
         return "successful";
