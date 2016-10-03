@@ -10,6 +10,6 @@ node {
         def mvnHome = tool 'Maven 3.2.5'
         echo 'build'
         sh 'pwd'
-        sh '${mvnHome}/bin/mvn clean install'
+        sh "${mvnHome}/bin/mvn clean install"
     }
 }
